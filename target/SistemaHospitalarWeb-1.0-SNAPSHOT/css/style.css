@@ -1,0 +1,171 @@
+/* ==========================================
+   ESTILO PADRÃO: APLICAÇÃO DESKTOP (SWING/NIMBUS)
+   ================================---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+}
+
+body {
+    background-color: #d6d9df; /* Fundo cinza clássico do desktop */
+    color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Trava a tela simulando uma janela maximizada */
+}
+
+/* Menu Superior (Equivalente ao JMenuBar) */
+.menu-bar, header {
+    background: linear-gradient(to bottom, #f4f5f7, #dcdfe6);
+    border-bottom: 1px solid #9ba3b0;
+    padding: 6px 12px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.menu-bar a, header a, .menu-item {
+    text-decoration: none;
+    color: #1e1e1e;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.menu-bar a:hover, header a:hover {
+    background-color: #39698a;
+    color: #ffffff;
+}
+
+/* Área Principal simulando a Janela Interna */
+main {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Janela / Moldura Estilo Desktop */
+.app-window {
+    background-color: #eef0f4;
+    border: 1px solid #a6aebc;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Barra de Título da Janela */
+.window-titlebar {
+    background: linear-gradient(to bottom, #e2e6ed, #c8d0df);
+    border-bottom: 1px solid #a6aebc;
+    padding: 6px 10px;
+    font-weight: bold;
+    color: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.window-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Formulários Compactos */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 8px 15px;
+    align-items: center;
+}
+
+label {
+    font-weight: 600;
+    color: #333;
+    text-align: right;
+    padding-right: 10px;
+}
+
+input, select {
+    padding: 5px 8px;
+    border: 1px solid #9ba3b0;
+    border-radius: 3px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+input:focus, select:focus {
+    border-color: #39698a;
+    outline: none;
+    box-shadow: 0 0 3px rgba(57, 105, 138, 0.4);
+}
+
+/* Botões Estilo Desktop */
+.button-bar {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #cbd1dc;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.btn {
+    padding: 5px 14px;
+    border: 1px solid #8c96a6;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, #ffffff, #dfe3eb);
+    color: #1e1e1e;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #eef2f7, #cfd6e3);
+}
+
+/* Tabelas (JTable simulada) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: 1px solid #a6aebc;
+    margin-top: 5px;
+}
+
+th {
+    background: linear-gradient(to bottom, #e9ecf2, #cfd5e0);
+    color: #222;
+    font-weight: bold;
+    text-align: left;
+    padding: 6px 8px;
+    border-bottom: 1px solid #9ba3b0;
+    border-right: 1px solid #dcdfe6;
+}
+
+td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #dcdfe6;
+    border-right: 1px solid #e6e9ef;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f7f8fa;
+}
+
+tbody tr:hover {
+    background-color: #39698a;
+    color: #ffffff;
+    cursor: pointer;
+}

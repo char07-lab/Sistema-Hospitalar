@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Hospitalar - Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Menu Superior (JMenuBar) -->
+    <nav class="menu-bar">
+        <a href="cadastro.html">Cadastro</a>
+        <a href="busca.html">Busca</a>
+        <a href="index.html">Sair</a>
+    </nav>
+
+    <!-- Área Principal -->
+    <main>
+        <div class="app-window" style="max-width: 650px;">
+            <!-- Barra de Título da Janela -->
+            <div class="window-titlebar">
+                <span>CADASTRO PACIENTE</span>
+                <span>_ X</span>
+            </div>
+            
+            <div class="window-body">
+                <form id="formCadastro">
+                    <div class="form-grid">
+                        <label for="txtNome">Nome</label>
+                        <input type="text" id="txtNome" maxlength="55" required>
+
+                        <label for="txtCpf">CPF</label>
+                        <input type="text" id="txtCpf" placeholder="000.000.000-00" maxlength="14" required>
+
+                        <label for="txtEndereco">Endereço</label>
+                        <input type="text" id="txtEndereco" maxlength="200" required>
+
+                        <label for="txtTelefone">Telefone</label>
+                        <input type="text" id="txtTelefone" placeholder="(00)00000-0000" maxlength="15" required>
+
+                        <label for="txtEmail">E-mail</label>
+                        <input type="text" id="txtEmail">
+
+                        <label for="txtDataNasc">Data Nascimento</label>
+                        <input type="text" id="txtDataNasc" placeholder="DD/MM/AAAA" maxlength="10" required>
+
+                        <label for="cbConvenio">Convênio</label>
+                        <select id="cbConvenio" required>
+                            <option value="">-Selecione-</option>
+                            <option value="1">Unimed</option>
+                            <option value="2">Particular</option>
+                        </select>
+                    </div>
+
+                    <div class="button-bar">
+                        <button type="submit" class="btn">cadastrar</button>
+                        <button type="reset" class="btn">limpar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/cadastro.js"></script>
+</body>
+</html>
